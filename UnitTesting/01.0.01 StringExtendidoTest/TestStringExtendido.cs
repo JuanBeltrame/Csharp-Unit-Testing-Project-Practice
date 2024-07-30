@@ -27,7 +27,7 @@ namespace StringExtendidoTest
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void ContarPlabras_RecibeUnStringVacio_DeberiaLanzarArgumentException()
+        public void ContarPlabras2_RecibeUnStringVacio_DeberiaLanzarArgumentException()
         {
             // Arrange
             string str = string.Empty;
@@ -40,7 +40,7 @@ namespace StringExtendidoTest
         }
 
         [TestMethod]
-        public void ContarPalabras_CuandoRecibeDosPalabrasSeparadasPorGuion_DeberiaRetornarNumeroDos()
+        public void ContarPalabras3_CuandoRecibeDosPalabrasSeparadasPorGuion_DeberiaRetornarNumeroDos()
         {
             // Arrange
             string texto = "Hola-Mundo";

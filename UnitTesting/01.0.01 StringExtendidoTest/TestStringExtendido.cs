@@ -52,5 +52,33 @@ namespace StringExtendidoTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ContarVocales_CuandoNoTieneVocales_DeberiaRetornarCero()
+        {
+            // Arrange
+            int expected = 0;
+            string text = "Hl Mnd";    
+
+            // Act 
+            int actual = StringExtendido.ContarVocales(text);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarVocales_CuandoNoTieneDosVocales_DeberiaRetornarDos()
+        {
+            // Arrange
+            int expected = 2;
+            string text = "casa";
+
+            // Act 
+            int actual = StringExtendido.ContarVocales(text);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

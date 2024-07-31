@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.0.02 TestFizzBuzz", "Uni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.0.02 Extension", "UnitTesting\01.0.02 Extension\01.0.02 Extension.csproj", "{43FA2E90-DED3-4C6B-8901-9E42F7596392}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.0.03 Pruebas", "UnitTesting\01.0.03 Pruebas\01.0.03 Pruebas.csproj", "{C85E0731-2655-446D-B804-02DC668390B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.0.03 Library", "UnitTesting\01.0.03 Library\01.0.03 Library.csproj", "{7EC50233-9AB1-438F-8479-30E2D6368AF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{43FA2E90-DED3-4C6B-8901-9E42F7596392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FA2E90-DED3-4C6B-8901-9E42F7596392}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FA2E90-DED3-4C6B-8901-9E42F7596392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85E0731-2655-446D-B804-02DC668390B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85E0731-2655-446D-B804-02DC668390B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85E0731-2655-446D-B804-02DC668390B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85E0731-2655-446D-B804-02DC668390B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC50233-9AB1-438F-8479-30E2D6368AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC50233-9AB1-438F-8479-30E2D6368AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC50233-9AB1-438F-8479-30E2D6368AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC50233-9AB1-438F-8479-30E2D6368AF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

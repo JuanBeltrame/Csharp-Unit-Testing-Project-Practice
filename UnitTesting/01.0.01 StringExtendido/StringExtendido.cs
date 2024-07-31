@@ -29,7 +29,23 @@
                 throw new ArgumentException();
             }
 
-            return str.Split(new char[] {' ', '-' }, StringSplitOptions.RemoveEmptyEntries).Length;
+            return str.Split(new char[] { ' ', '-' }, StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+
+        public static int ContarVocales(string texto)
+        {
+            char[] vocales = ['a', 'e', 'i', 'o', 'u'];
+            int contador = 0;
+
+            foreach (char caracter in texto)
+            {
+                if (vocales.Contains(caracter))
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
         }
     }
 }

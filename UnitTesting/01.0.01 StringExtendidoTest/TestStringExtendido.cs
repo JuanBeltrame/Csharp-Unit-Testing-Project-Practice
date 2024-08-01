@@ -68,6 +68,34 @@ namespace StringExtendidoTest
         }
 
         [TestMethod]
+        public void ContarVocales_CuandoNoTieneDosVocalEnMinuscula_DeberiaRetornarDos()
+        {
+            // Arrange
+            int expected = 2;
+            string text = "casa";
+
+            // Act 
+            int actual = StringExtendido.ContarVocales(text);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarVocales_CuandoNoTieneTresVocalEnMayuscula_DeberiaRetornarTres()
+        {
+            // Arrange
+            int expected = 3;
+            string text = "LA COSA";
+
+            // Act 
+            int actual = text.ContarVocales();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ContarVocales_CuandoNoTieneDosVocales_DeberiaRetornarDos()
         {
             // Arrange
@@ -76,6 +104,65 @@ namespace StringExtendidoTest
 
             // Act 
             int actual = StringExtendido.ContarVocales(text);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarVocales_CuandoElTextoEsNulo_DeberiaRetornarCero()
+        {
+            // Arrange
+            int expected = 0;
+            string text = null;
+
+            // Act 
+            int actual = text.ContarVocales();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarCaracteres_CuandoNoTieneElCaracter_DeberiaRetornarCero()
+        {
+            // Arrange
+            int expected = 0;
+            string text = "trffjk jklk";
+            char caracter = ';';
+
+            // Act 
+            int actual = text.ContarCaracteres(caracter);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarCaracteres_CuandoTieneElCaracterDosVeces_DeberiaRetornarDos()
+        {
+            // Arrange
+            int expected = 2;
+            string text = "trffjk. jklk.";
+            char caracter = '.';
+
+            // Act 
+            int actual = text.ContarCaracteres(caracter);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContarCaracteres_CuandoElTextoEsNulo_DeberiaRetornarCero()
+        {
+            // Arrange
+            int expected = 0;
+            string? text = null;
+            char caracter = '.';
+
+            // Act 
+            int actual = text.ContarCaracteres(caracter);
 
             // Assert
             Assert.AreEqual(expected, actual);

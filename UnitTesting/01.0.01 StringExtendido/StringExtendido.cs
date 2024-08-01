@@ -32,8 +32,12 @@
             return str.Split(new char[] { ' ', '-' }, StringSplitOptions.RemoveEmptyEntries).Length;
         }
 
-        public static int ContarVocales(string texto)
+        public static int ContarVocales(this string texto)
         {
+            if (string.IsNullOrEmpty(texto))
+                return 0;
+
+            texto = texto.ToLower();
             char[] vocales = ['a', 'e', 'i', 'o', 'u'];
             int contador = 0;
 
@@ -45,6 +49,23 @@
                 }
             }
 
+            return contador;
+        }
+
+        public static int ContarCaracteres(this string texto, char caracter)
+        {
+            if (string.IsNullOrEmpty(texto))
+                return 0;
+
+            int contador = 0;
+
+            foreach (char caracterTexto in texto)
+            {
+                if (caracterTexto == caracter)
+                {
+                    contador++;
+                }
+            }
             return contador;
         }
     }

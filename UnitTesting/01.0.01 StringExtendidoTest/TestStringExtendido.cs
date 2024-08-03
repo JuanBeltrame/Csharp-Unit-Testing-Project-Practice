@@ -124,6 +124,16 @@ namespace StringExtendidoTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(BusinessException))]
+        public void ContarVocales_CuandoElTextoEsNulo_DeberiaLanzarBusinessException()
+        {
+            
+          string text = null;
+
+          text.ContarVocalesException();
+        }
+
+        [TestMethod]
         public void ContarCaracteres_CuandoNoTieneElCaracter_DeberiaRetornarCero()
         {
             // Arrange
@@ -166,6 +176,21 @@ namespace StringExtendidoTest
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(BusinessException))]
+        public void ContarCaracteres_CuandoElTextoEsNulo_DeberiaLanzarBusinessException()
+        {
+            // Arrange
+            int expected = 0;
+            string? text = null;
+            char caracter = '.';
+
+            // Act 
+            text.ContarCaracteresException(caracter);
+
+            // Assert
         }
     }
 }

@@ -34,16 +34,33 @@
 
         public static int ContarVocales(this string texto)
         {
+            char[] vocales = ['a', 'e', 'i', 'o', 'u'];
+            return ContarCaracteres(texto, vocales);
+        }
+
+        public static int ContarVocalesException(this string texto)
+        {
+            char[] vocales = ['a', 'e', 'i', 'o', 'u'];
+            return ContarCaracteresException(texto, vocales);
+        }
+
+        public static int ContarCaracteres(this string texto, char caracter)
+        {
+            return ContarCaracteres(texto, new char[] { caracter });
+        }
+
+        private static int ContarCaracteres(this string texto, char[] caracteres)
+        {
             if (string.IsNullOrEmpty(texto))
                 return 0;
 
             texto = texto.ToLower();
-            char[] vocales = ['a', 'e', 'i', 'o', 'u'];
+
             int contador = 0;
 
             foreach (char caracter in texto)
             {
-                if (vocales.Contains(caracter))
+                if (caracteres.Contains(caracter))
                 {
                     contador++;
                 }
@@ -52,20 +69,28 @@
             return contador;
         }
 
-        public static int ContarCaracteres(this string texto, char caracter)
+        public static int ContarCaracteresException(this string texto, char caracter)
+        {
+            return ContarCaracteresException(texto, new char[] { caracter });
+        }
+
+        private static int ContarCaracteresException(this string texto, char[] caracteres)
         {
             if (string.IsNullOrEmpty(texto))
-                return 0;
+                throw new BusinessException("El texto es nulo");
+
+            texto = texto.ToLower();
 
             int contador = 0;
 
-            foreach (char caracterTexto in texto)
+            foreach (char caracter in texto)
             {
-                if (caracterTexto == caracter)
+                if (caracteres.Contains(caracter))
                 {
                     contador++;
                 }
             }
+
             return contador;
         }
     }
